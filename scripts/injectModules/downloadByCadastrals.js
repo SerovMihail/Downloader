@@ -33,8 +33,16 @@ function startDownloading() {
 
                 document.querySelector('.v-link a').click();
 
-                if (numbersOfRequest.length > 0)
+                if (numbersOfRequest.length > 0) {
                     delay_loop();
+                } else {
+
+                    chrome.storage.local.remove('numbersOfRequest', function (items) {
+                        console.log(items);
+                    });                    
+                    
+                }
+                    
 
             });
 

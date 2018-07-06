@@ -1,6 +1,6 @@
 function startDownloadPage() {
   chrome.tabs.executeScript({
-    file: './scripts/injectModules/downloadPageScript.js'
+    file: 'scripts/injectModules/downloadPageScript.js'
   });
 }
 
@@ -12,7 +12,7 @@ function startDownloadByCadastrals() {
     numbersOfRequest: numbersOfRequestString
   }, function () {
     chrome.tabs.executeScript({
-      file: "./scripts/injectModules/downloadByCadastrals.js"
+      file: "scripts/injectModules/downloadByCadastrals.js"
     });
   });
 }

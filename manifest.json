@@ -12,20 +12,10 @@
 		"16": "./icons/downloads-icon.png",
 		"128": "./icons/downloads-icon.png"
 	},
-	"content_scripts": [
-		{
-			"matches": [
-				"https://rosreestr.ru/wps/portal/p/cc_present/ir_egrn"
-			],
-			"js": [
-				"./scripts/modules/downloadPageScript.js",
-				"./scripts/modules/downloadByCadastrals.js"
-			]
-		}
-	],
-	"permissions": [
-		"tabs",
+	"permissions": [		
 		"<all_urls>",
-		"storage"
+		"storage",
+		"tabs",
+		"activeTab"
 	]
 }
