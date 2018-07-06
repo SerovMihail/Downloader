@@ -1,0 +1,31 @@
+{
+	"manifest_version": 2,
+	"name": "СкачивателЬ",
+	"version": "0.0.2",
+	"description": "Скачивание заявок",
+	"browser_action": {
+		"default_icon": "./icons/downloads-icon.png",
+		"default_title": "СкачивателЬ",
+		"default_popup": "popup.html"
+	},
+	"icons": {
+		"16": "./icons/downloads-icon.png",
+		"128": "./icons/downloads-icon.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://rosreestr.ru/wps/portal/p/cc_present/ir_egrn"
+			],
+			"js": [
+				"./scripts/modules/downloadPageScript.js",
+				"./scripts/modules/downloadByCadastrals.js"
+			]
+		}
+	],
+	"permissions": [
+		"tabs",
+		"<all_urls>",
+		"storage"
+	]
+}

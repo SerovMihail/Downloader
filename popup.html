@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>СкачивателЬ</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="tabs-wrap">
+        <a href="#download-page" data-tab="download-page" class="b-nav-tab">
+            Скачать постранично
+        </a>
+        <a href="#download-request-numbers" data-tab="download-request-numbers" class="b-nav-tab  active">
+            Скачать с помощью номеров запросов
+        </a>
+    </div>
+
+    <div id="download-page" class="b-tab">
+        <h1 class="h1">Инструкция</h1>
+        <ol class="ol">
+            <li>Необходимо находится на странице скачивания готовых заявок</li>
+            <li>Нажать на кнопку "Скачать заявки"</li>
+            <li>Будут скачаны все заявки, которые находятся на данной странице</li>
+        </ol>
+        <button class="button" id="downloadPage">Скачать заявки</button>
+    </div>
+
+    <div id="download-request-numbers" class="b-tab  active">
+        <h1 class="h1">Инструкция</h1>
+        <ol class="ol">
+            <li>Необходимо находится на странице скачивания готовых заявок</li>
+            <li>Заполните текстовое поле номерами запросов через пробел!</li>
+            <li>Будут скачаны все заявки, по запрошенным номерам</li>
+            <li>
+                <strong>Не пытайтесь переключить страницу во время скачивания! Это может привести к ошибкам!</strong>
+                <p>Возможно запустить браузер на другом рабочем столе, в этом случае можно работать.
+                    <a href="https://windowsten.ru/virtualnyj-mir-novogo-windows-10/" target="_blank">Как пользоваться рабочими столами?</a>
+                </p>
+            </li>
+        </ol>
+        <div class="textarea-wrap">
+            <textarea id='number-of-request-data' cols="30" rows="10" placeholder="Номера запросов через пробел копировать сюда!"></textarea>
+        </div>
+        <button class="button" id="download">Скачать заявки</button>
+    </div>
+
+    <script src="scripts/vendors/vendorTabs.js"></script>
+    <script src='scripts/common/popup.js'></script>
+
+</body>
+
+</html>
